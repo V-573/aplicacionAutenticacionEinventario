@@ -47,6 +47,8 @@ document.getElementById('registerForm').addEventListener('submit', async e => {
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({ email: data.email, password: data.password })
       });
+
+      
       const loginJson = await loginRes.json();
       if (loginJson.token) {
         localStorage.setItem('token', loginJson.token);

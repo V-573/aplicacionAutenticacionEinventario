@@ -1,12 +1,13 @@
 // routes/auth.routes.js
 import express from 'express';
 
-import { crearUsuraio, registrarse } from '../controller/user.controller.js';
+import { crearUsuraio, loguearse } from '../controller/user.controller.js';
 
 const router = express.Router();
 
 router.post('/register', crearUsuraio);
-router.post('/login', registrarse);
+router.post('/login', loguearse);
+
 
 
 export default router;

@@ -32,7 +32,7 @@ return res.status(201).json({ message: 'Usuario creado', token, user: { id: user
 };
 
 
-export const registrarse =  async (req, res) => {
+export const loguearse =  async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
